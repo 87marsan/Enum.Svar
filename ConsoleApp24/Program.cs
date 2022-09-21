@@ -12,11 +12,10 @@ namespace ConsoleApp24
             dayName = dayName.ToUpper();
             dayName += input.Substring(1);
 
-            object? objThing = null;
-            Enum.TryParse(typeof(Veckodagar), dayName, out objThing);
+            var tryParse = Enum.TryParse(typeof(Veckodagar), dayName, out var objThing);
             Veckodagar miniX = (Veckodagar)objThing;
 
-            Console.WriteLine((int)(Veckodagar)miniX);
+            Console.WriteLine((int)miniX);
 
         }
 
